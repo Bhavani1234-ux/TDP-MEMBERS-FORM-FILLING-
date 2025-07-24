@@ -118,6 +118,7 @@
     <input type="tel" id="phone" name="phone" required placeholder="e.g. 9876543210">
 
     <button type="button" onclick="sendOTP()">Send OTP</button>
+<div id="otpDisplay" style="margin-top: 10px; color: #0984e3; font-weight: bold;"></div>
 
     <div id="otpSection">
       <label for="otp">Enter OTP</label>
@@ -151,6 +152,8 @@
     alert(Test OTP sent: ${sentOTP});
 
     document.getElementById('otpSection').style.display = 'block';
+    document.getElementById('otpDisplay').textContent = Your OTP is: ${sentOTP};
+
     otpInput.setAttribute("required", "true");
   }
 
@@ -234,4 +237,3 @@ document.getElementById("userForm").addEventListener("input", function () {
 
 </body>
 </html>
-
